@@ -1,9 +1,12 @@
 import React from 'react'
+import { Header } from './Componet/header/Header'
+import { Outlet } from 'react-router'
 
 export const Rout = () => {
   return (
     <>
-    <h1>mehedi</h1>
-    </>
+    <Header/>
+    <Outlet/>
+     </>
   )
 }
