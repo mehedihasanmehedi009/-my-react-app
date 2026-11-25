@@ -14,7 +14,7 @@ import { Home } from "./Componet/User/Home";
     element:<Rout/>,
     children:[
           {
-        path:"/Home",
+        path:"/",
         element:<Suspense fallback={<span> Loding......</span>}>
           <Home promisce={promisce}></Home>
         </Suspense>

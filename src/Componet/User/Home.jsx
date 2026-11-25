@@ -1,10 +1,13 @@
  import  { use } from "react";
 import { NavLink } from "react-router";
+import { Salider } from "../Salider/Salider";
 
 export const Home= ({ promisce }) => {
   const users = use(promisce);
 
   return (
+    <>
+    <Salider/>
     <div style={{ padding: "20px", maxWidth: "1100px", margin: "0 auto" }}>
       <h2 style={{ marginBottom: "16px" }}>
         Users ({users?.length ?? 0})
@@ -94,5 +97,6 @@ export const Home= ({ promisce }) => {
         ))}
       </div>
     </div>
+    </>
   );
 };
