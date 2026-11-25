@@ -1,7 +1,7 @@
- import React, { use } from "react";
+ import  { use } from "react";
 import { NavLink } from "react-router";
 
-export const Users = ({ promisce }) => {
+export const Home= ({ promisce }) => {
   const users = use(promisce);
 
   return (
@@ -74,7 +74,7 @@ export const Users = ({ promisce }) => {
             </div>
 
             <NavLink
-              to={`/users/${user.id}`}
+              to={`/Home/${user.id}`}
               style={{
                 marginTop: "8px",
                 display: "inline-block",

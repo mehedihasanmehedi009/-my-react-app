@@ -1,7 +1,7 @@
 import React from "react";
 import { useLoaderData, useNavigate } from "react-router";
 
-export const UserDetails = () => {
+export const HomeDetails= () => {
   const user = useLoaderData();
   const navigate = useNavigate();
 

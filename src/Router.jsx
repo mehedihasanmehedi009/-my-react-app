@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router";
 import { Rout } from "./Rout";
-import { User } from "./Componet/User/User";
-import { Users } from "./Componet/User/Users";
+
 import { Suspense } from "react";
-import { UserDetails } from "./Componet/User/UserDetails";
+import { HomeDetails } from "./Componet/User/HomeDetails";
+import { Home } from "./Componet/User/Home";
     
     const promisce = fetch("https://jsonplaceholder.typicode.com/users")
     .then(res => res.json())
@@ -13,26 +13,19 @@ import { UserDetails } from "./Componet/User/UserDetails";
     path: "/",
     element:<Rout/>,
     children:[
-        {
-   path:"/user",
-    loader:() => fetch("https://jsonplaceholder.typicode.com/users"),
-    Component:User
-
-        },
-        {
-        path:"/users",
+          {
+        path:"/Home",
         element:<Suspense fallback={<span> Loding......</span>}>
-          <Users promisce={promisce}></Users>
+          <Home promisce={promisce}></Home>
         </Suspense>
         },
         {
-  path: "users/:id",
+  path: "Home/:id",
   loader: ({ params }) =>
     fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
-  element: <UserDetails/>
-}
+  element: <HomeDetails/>
+},
 
-                  
 
     ]
   },
