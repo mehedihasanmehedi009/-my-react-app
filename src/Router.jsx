@@ -4,6 +4,7 @@ import { Rout } from "./Rout";
 import { Suspense } from "react";
 import { HomeDetails } from "./Componet/User/HomeDetails";
 import { Home } from "./Componet/User/Home";
+import { Error } from "./Error";
     
     const promisce = fetch("https://jsonplaceholder.typicode.com/users")
     .then(res => res.json())
@@ -27,6 +28,7 @@ import { Home } from "./Componet/User/Home";
 },
 
 
-    ]
+    ],
+    errorElement:<Error/>
   },
 ]);
