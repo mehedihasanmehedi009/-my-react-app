@@ -6,9 +6,11 @@ import { Footer } from './Componet/Footer/Footer'
 export const Rout = () => {
   return (
     <>
-    <Header/>
+    <div className='bg-base-300'>
+      <Header/>
     <Outlet/>
     <Footer/>
+    </div>
      </>
   )
 }

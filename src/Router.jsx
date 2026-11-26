@@ -6,7 +6,7 @@ import { HomeDetails } from "./Componet/User/HomeDetails";
 import { Home } from "./Componet/User/Home";
 import { Error } from "./Error";
     
-    const promisce = fetch("https://jsonplaceholder.typicode.com/users")
+    const promisce = fetch("Books.json")
     .then(res => res.json())
 
  export const router = createBrowserRouter([
