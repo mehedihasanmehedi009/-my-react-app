@@ -5,6 +5,8 @@ import { Suspense } from "react";
 import { HomeDetails } from "./Componet/User/HomeDetails";
 import { Home } from "./Componet/User/Home";
 import { Error } from "./Error";
+import { Listed } from "./Componet/Listed/Listed";
+import { Wishlist } from "./Componet/Wishlist/Wishlist";
     
     const promisce = fetch("Books.json")
     .then(res => res.json())
@@ -21,13 +23,26 @@ import { Error } from "./Error";
         </Suspense>
         },
         {
-  path: "Home/:id",
-  loader: ({ params }) =>
-    fetch(`https://jsonplaceholder.typicode.com/users/${params.id}`),
-  element: <HomeDetails/>
+  path: "Home/:bookId",
+  loader: async ({ params }) => {
+    const res = await fetch("/Books.json")
+    .then((res)=> res.json());
+    return (
+      res.find((book) => Number(book.bookId) === Number(params.bookId)) ??
+      null
+    );
+  },
+ 
+  element: <HomeDetails />,
 },
-
-
+ {
+    path:"/listed",
+    element:<Listed/>
+  },
+  {
+    path:"/wishliste",
+    element:<Wishlist/>
+  }
     ],
     errorElement:<Error/>
   },

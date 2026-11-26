@@ -45,10 +45,10 @@ export const Header = () => {
           <NavLink to="/" end className={navClass}>
             Home
           </NavLink>
-          <NavLink to="/listed-books" className={navClass}>
+          <NavLink to="/listed" className={navClass}>
             Listed Books
           </NavLink>
-          <NavLink to="/pages-to-read" className={navClass}>
+          <NavLink to="/wishliste" className={navClass}>
             Pages to Read
           </NavLink>
         </nav>
@@ -82,14 +82,14 @@ export const Header = () => {
             Home
           </NavLink>
           <NavLink
-            to="/listed-books"
+            to="/listed"
             onClick={() => setMenuOpen(false)}
             className={mobileNavClass}
           >
             Listed Books
           </NavLink>
           <NavLink
-            to="/pages-to-read"
+            to="/wishliste"
             onClick={() => setMenuOpen(false)}
             className={mobileNavClass}
           >

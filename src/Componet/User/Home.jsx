@@ -68,7 +68,7 @@ export const Home = ({ promisce }) => {
 
             {/* Details Button */}
             <NavLink
-              to={`/book/${book.bookId}`}
+              to={`/Home/${book.bookId}`}
               className="mt-4 block text-center py-2.5 px-4 rounded-lg bg-[#3730a3] hover:bg-[#2e278c] text-white text-sm font-semibold transition-colors no-underline"
             >
               View Details
