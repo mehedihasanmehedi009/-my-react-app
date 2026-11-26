@@ -9,7 +9,7 @@ export const Home = ({ promisce }) => {
     <>
       <Salider />
 
-      <div className="max-w-6xl mx-auto px-5 py-8 bg-white text-slate-900">
+      <div className="max-w-6xl mx-auto px-5 py-8 text-slate-900">
         <div className=" text-center gap-4 mb-6">
           <h2 className="text-2xl font-bold text-slate-900">
             All Books({users?.length ?? 0})
