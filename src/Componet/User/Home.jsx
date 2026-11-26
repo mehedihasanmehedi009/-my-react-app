@@ -12,7 +12,7 @@ export const Home = ({ promisce }) => {
       <div className="max-w-6xl mx-auto px-5 py-8 bg-white text-slate-900">
         <div className="flex items-center justify-between gap-4 mb-6">
           <h2 className="text-2xl font-bold text-slate-900">
-            Users ({users?.length ?? 0})
+            All Books({users?.length ?? 0})
           </h2>
         </div>
 
